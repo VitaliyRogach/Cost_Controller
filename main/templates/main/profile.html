@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="py-5 text-center">
+        <h1>Мой профиль</h1>
+        Имя пользователя: {{ user.username }} <br>
+        Email: {{ user.email }}<br>
+
+        <div class="m-5">
+            <img src="{% static 'profile.png' %}" style="vertical-align: inherit;" width="480" height="410">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

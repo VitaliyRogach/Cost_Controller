@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+О нас
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="py-5 text-center">
+        <div class="m-5">
+            <img src="{% static 'ultra2.png' %}" style="vertical-align: inherit;">
+        </div>
+        <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Контроль расходов с функцией
+            ежедневника"</font></font></h2>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Приложение создано
+            для удобной работы с финансами. Каждый пользователь будет иметь свой аккаунт с его личной информацией. Здесь
+            Вы можете вести список своих расходов, а так же делать заметки. </font>
+            <font style="vertical-align: inherit;">Регистрируйтесь и работаейте вместе с нами!</font></font></p>
+
+        {% if user.is_authenticated %}
+
+        <h5><font style="vertical-align: inherit;">Добро пожаловать, <a href="{% url 'profile' %}"
+                                                                        title="Посетить профиль">{{user.username}}</a>!</font>
+        </h5>
+
+        {% else %}
+        <a class="btn btn-outline-secondary" href="{% url 'login' %}">Войти!</a>
+        {% endif %}
+
+    </div>
+
+
+</div>
+
+{% endblock %}
+

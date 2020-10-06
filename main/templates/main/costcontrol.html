@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Контроль расходов
+{% endblock %}
+
+{% block content %}
+ <div class="container">
+
+
+    <div class="py-5 text-center">
+        <h2>Контроль расходов</h2>
+        <p>Работа с собственным листом расходов</p>
+        <div class="alert mt-3 bg-info"></div>
+    </div>
+
+
+<link type="text/css" rel="stylesheet" href="{% static 'style.css' %}">
+
+            <div class="budget">
+
+
+                <div class="budget__value"></div>
+                <div class="budget__income clearfix">
+                    <div class="budget__income--text">Доход</div>
+                    <div class="right">
+                        <div class="budget__income--value"></div>
+                        <div class="budget__income--percentage"></div>
+                    </div>
+                </div>
+
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses--text">Расход</div>
+                    <div class="right clearfix">
+                        <div class="budget__expenses--value"></div>
+                        <div class="budget__expenses--percentage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="bottom container">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="inc" selected>+</option>
+                        <option value="exp">-</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Добавьте элемент">
+                    <input type="number" class="add__value" placeholder="Значение">
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline">Добавить</i></button>
+                </div>
+            </div>
+
+            <div class="container d-flex common-list">
+                <div class="income">
+                    <h2 class="icome__title">Доход</h2>
+
+                    <div class="income__list">
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="expenses">
+                    <h2 class="expenses__title">Расход</h2>
+
+                    <div class="expenses__list">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="{% static 'app.js' %}"></script>
+ </div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="reg-container">
+    <h1 class="text-center mt-5">Регистрация</h1>
+    <div class="d-flex align-content-end justify-content-center">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" class="form-control mb-2 mt-3" name="username" placeholder="Введите имя"
+                   required="" autofocus="">
+            <input type="email" class="form-control mb-2" name="email" placeholder="Email адрес" required=""
+                   autofocus="">
+            <div class="row">
+                <div class="col">
+                    <input type="password" class="form-control mb-2" name="password" placeholder="Пароль"
+                           required="">
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control mb-2" name="password2" placeholder="Повторите пароль"
+                           required="">
+                </div>
+            </div>
+
+                     <div class="d-flex align-content-end justify-content-center mt-3">
+                    <button class="btn btn-lg btn-primary mt-2" type="submit">Зарегистрироваться</button>
+                     </div>
+                    <div class="d-flex align-content-end justify-content-center mt-3">
+                    <a class="btn btn-lg btn-primary mt-2" href="{% url 'login' %}">Войти</a>
+                    </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

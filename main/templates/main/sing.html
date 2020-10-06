@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Вход
+{% endblock %}
+
+{% block content %}
+<div class="text-center d-flex align-content-end justify-content-center mt-4">
+    <form class="form-signin">
+
+        <h1 class="h3 mb-3 font-weight-normal"><font style="vertical-align: inherit;"><font
+                style="vertical-align: inherit;">Выполните вход</font></font></h1>
+        <label for="inputEmail" class="sr-only"><font style="vertical-align: inherit;"><font
+                style="vertical-align: inherit;">Адрес электронной почты</font></font></label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Адрес электронной почты" required=""
+               autofocus="">
+        <label for="inputPassword" class="sr-only"><font style="vertical-align: inherit;"><font
+                style="vertical-align: inherit;">Пароль</font></font></label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="пароль" required="">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font
+                    style="vertical-align: inherit;"> Запомнить
+            </font></font></label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><font style="vertical-align: inherit;"><font
+                style="vertical-align: inherit;">Войти в систему</font></font></button>
+        <p class="mt-5 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">©
+            2020</font></font></p>
+    </form>
+    <div class="goog-te-spinner-pos">
+        <div class="goog-te-spinner-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px"
+                 viewBox="0 0 66 66">
+                <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33"
+                        r="30"></circle>
+            </svg>
+        </div>
+    </div>
+</div>
+{% endblock %}
